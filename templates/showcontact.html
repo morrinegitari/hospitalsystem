@@ -1,0 +1,30 @@
+{% extends 'starter-page.html' %}
+
+{% load static %}
+
+{% block content %}
+<p>All Contact List</p>
+ <div class="d-flex flex-wrap gap-5 container">
+{% for x in message %}
+	<div class="card w-30 p-4 shadow-lg ">
+   <p class="text-primary fw-bold"> {{ x.name }}</p>
+   <p><strong>Name</strong>: {{ x.name }}</p>
+   <p><strong>Email</strong>: {{ x.email }}</p>
+   <p><strong>Subject</strong>: {{ x.subject }}</p>
+   <p><strong>Message</strong>: {{ x.message }}</p>
+<p>
+    <a href="" class="text-warning me-5">
+        <i class="bi bi-pencil"></i>Edit
+    </a>
+    <a href="/delete/{{ x.id }}" class="table-danger">
+        <i class="bi bi-trash"></i>Delete
+    </a>
+
+</p>
+
+    </div>
+{% endfor %}
+
+
+</div>
+{% endblock %}

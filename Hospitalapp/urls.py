@@ -12,4 +12,9 @@ urlpatterns = [
     path('department/', views.department,name='department'),
     path('doctors/', views.doctors,name='doctors'),
     path('contact/', views.contact,name='contact'),
+    path('show/', views.show,name='show'),
+    path('delete/<int:id>', views.delete),
+    path('showcontact/', views.showcontact,name='showcontact'),
+    path('deletecontact/<int:id>', views.deletecontact),
+    path('edit/<int:id>', views.edit,name='edit'),
 ]
